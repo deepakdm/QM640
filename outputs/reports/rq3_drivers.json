@@ -1,0 +1,29 @@
+{
+  "engine": "statsmodels GEE (exchangeable)",
+  "working_correlation": 0.6790968109004157,
+  "n_observations": 375,
+  "n_complaints": 125,
+  "dispute_reference": "incorrect_amount",
+  "events_per_parameter": 35.625,
+  "ame": {
+    "B": {
+      "ame_total": 0.024258940508789892,
+      "ame_direct": 0.022428521150314632,
+      "share_via_clause": 0.07545339244358312,
+      "share_ci": [
+        -0.5818528260192335,
+        0.9430841577836327
+      ]
+    },
+    "C": {
+      "ame_total": 0.024258940508789892,
+      "ame_direct": 0.017750143846062515,
+      "share_via_clause": 0.268305067171792,
+      "share_ci": [
+        -2.8068452385305225,
+        2.126554100651378
+      ]
+    }
+  },
+  "converged": true
+}

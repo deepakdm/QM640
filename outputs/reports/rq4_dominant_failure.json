@@ -1,0 +1,18 @@
+{
+  "category": "over_escalation",
+  "count": 35,
+  "n_errors": 94,
+  "share": 0.3723404255319149,
+  "wilson_ci": [
+    0.2814318660117187,
+    0.4732733449563353
+  ],
+  "p_one_sided_vs_0.20": 8.306053000952572e-05,
+  "pooled_A_B_C": false,
+  "counts": {
+    "over_escalation": 35,
+    "retrieval_miss": 33,
+    "right_clause_wrong_reasoning": 20,
+    "fabricated_citation": 6
+  }
+}

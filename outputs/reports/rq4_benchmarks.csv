@@ -1,0 +1,9 @@
+pillar,indicator,estimate,benchmark,verdict
+Accuracy,Accuracy gain over C0,-0.048 (Holm p = 0.2920),>= .15 and Holm p < .05,not met
+Accuracy,Absolute accuracy,0.248,> break-even 0.46,not met
+Groundedness,Fabricated-citation rate,"0.048 [0.022, 0.101]",upper 95% Wilson bound <= .05,inconclusive
+Groundedness,Correct clause cited vs C0,-0.328 (Holm p = 0.0000),"higher than C0, Holm p < .05",not met
+Operational,Run-to-run consistency,"0.968 [0.921, 0.987]",>= .90 of cases identical in all runs,met
+Operational,95th-percentile response time,"12.0s [11.4, 13.0]",<= 30 s,met
+Operational,Review burden,"0.968 [0.921, 0.987]",reported; enters cost model,reported
+Operational,Cost per case,see sensitivity table,assisted < manual minutes at observed accuracy,not met

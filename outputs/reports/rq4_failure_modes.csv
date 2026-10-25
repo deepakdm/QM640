@@ -1,0 +1,5 @@
+condition,clause_miss,correct,fabricated_citation,over_escalation,retrieval_miss,right_clause_wrong_reasoning
+C0,23,37,1,40,0,24
+A,0,28,2,47,13,35
+B,0,31,0,40,20,34
+C,0,31,6,35,33,20
