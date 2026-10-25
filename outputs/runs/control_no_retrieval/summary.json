@@ -1,0 +1,17 @@
+{
+  "n_cases":125.0,
+  "determination_accuracy":0.296,
+  "unparseable_rate":0.0,
+  "fabricated_citation_rate":0.008,
+  "correct_clause_rate":0.768,
+  "unverifiable_citation_rate":0.0,
+  "clause_in_context_rate":null,
+  "recall_at_k":null,
+  "precision_at_k":null,
+  "citation_validity":null,
+  "judged_support_(sample)":null,
+  "consistent_rate":0.992,
+  "review_required_rate":0.992,
+  "latency_median_s":8.29524025,
+  "latency_p95_s":10.0798762336
+}

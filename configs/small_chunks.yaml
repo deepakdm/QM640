@@ -1,0 +1,20 @@
+# Config B — Smaller chunks (vary ONE factor vs. baseline: chunk_size)
+name: dense_256
+corpus_dir: data/corpus
+gold_path: data/gold/gold_cases.jsonl
+chunking:
+  strategy: fixed
+  chunk_size: 256
+  overlap: 32
+retrieval:
+  mode: dense
+  top_k: 8
+  rerank: false
+  hybrid_alpha: 0.5
+generation:
+  temperature: 0.0
+  max_tokens: 800
+  require_citations: true
+evaluation:
+  runs_per_case: 3
+  judge_sample_size: 40

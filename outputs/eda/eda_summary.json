@@ -1,0 +1,258 @@
+{
+  "raw": {
+    "file": "data/raw/cfpb/complaints.csv",
+    "rows": 1610649,
+    "columns": 16,
+    "column_names": [
+      "Date received",
+      "Product",
+      "Sub-product",
+      "Issue",
+      "Sub-issue",
+      "Consumer complaint narrative",
+      "Company public response",
+      "Company",
+      "State",
+      "ZIP code",
+      "Tags",
+      "Submitted via",
+      "Date sent to company",
+      "Company response to consumer",
+      "Timely response?",
+      "Complaint ID"
+    ],
+    "duplicate_complaint_ids": 0,
+    "product_counts": {
+      "Credit reporting or other personal consumer reports": 1130638,
+      "Debt collection": 161739,
+      "Checking or savings account": 82072,
+      "Money transfer, virtual currency, or money service": 77957,
+      "Credit card": 71447,
+      "Mortgage": 25269,
+      "Vehicle loan or lease": 19880,
+      "Student loan": 17235,
+      "Payday loan, title loan, personal loan, or advance loan": 13751,
+      "Prepaid card": 6322,
+      "Debt or credit management": 4339
+    },
+    "missingness": {
+      "Date received": 0.0,
+      "Product": 0.0,
+      "Sub-product": 0.0,
+      "Issue": 0.0,
+      "Sub-issue": 6.32,
+      "Consumer complaint narrative": 0.0,
+      "Company public response": 47.37,
+      "Company": 0.0,
+      "State": 0.37,
+      "ZIP code": 0.02,
+      "Tags": 93.25,
+      "Submitted via": 0.0,
+      "Date sent to company": 0.0,
+      "Company response to consumer": 0.0,
+      "Timely response?": 0.0,
+      "Complaint ID": 0.0
+    }
+  },
+  "funnel": [
+    {
+      "step": "rows_read",
+      "description": "Rows in the export",
+      "rows": 1610649,
+      "removed": 0,
+      "removed_pct_of_previous": NaN,
+      "retained_pct_of_raw": 100.0
+    },
+    {
+      "step": "narrative_present",
+      "description": "Consumer narrative present and non-empty",
+      "rows": 1610649,
+      "removed": 0,
+      "removed_pct_of_previous": 0.0,
+      "retained_pct_of_raw": 100.0
+    },
+    {
+      "step": "in_date_window",
+      "description": "Received within the study window",
+      "rows": 1610649,
+      "removed": 0,
+      "removed_pct_of_previous": 0.0,
+      "retained_pct_of_raw": 100.0
+    },
+    {
+      "step": "in_scope_product",
+      "description": "Product governed by Regulation E",
+      "rows": 166351,
+      "removed": 1444298,
+      "removed_pct_of_previous": 89.67,
+      "retained_pct_of_raw": 10.328
+    },
+    {
+      "step": "dispute_type_mapped",
+      "description": "Issue / sub-issue mapped to one of seven dispute types",
+      "rows": 21780,
+      "removed": 144571,
+      "removed_pct_of_previous": 86.91,
+      "retained_pct_of_raw": 1.352
+    },
+    {
+      "step": "length_40_600",
+      "description": "Narrative length 40-600 words",
+      "rows": 18887,
+      "removed": 2893,
+      "removed_pct_of_previous": 13.28,
+      "retained_pct_of_raw": 1.173
+    },
+    {
+      "step": "unique_complaint_id",
+      "description": "Duplicate complaint IDs removed",
+      "rows": 18887,
+      "removed": 0,
+      "removed_pct_of_previous": 0.0,
+      "retained_pct_of_raw": 1.173
+    },
+    {
+      "step": "unique_narrative",
+      "description": "Exact duplicate narratives removed",
+      "rows": 18646,
+      "removed": 241,
+      "removed_pct_of_previous": 1.28,
+      "retained_pct_of_raw": 1.158
+    }
+  ],
+  "pool": {
+    "rows": 166351,
+    "dup_ids_in_pool": 0,
+    "dup_narratives_in_pool": 30071,
+    "words": {
+      "count": 166351.0,
+      "mean": 178.0571682767161,
+      "std": 188.34127649349043,
+      "min": 4.0,
+      "10%": 50.0,
+      "25%": 91.0,
+      "50%": 107.0,
+      "75%": 215.0,
+      "90%": 360.0,
+      "99%": 880.0,
+      "max": 6218.0
+    },
+    "words_skew": 5.801838261672863,
+    "below_min_words": 11957,
+    "above_max_words": 4935,
+    "iqr_upper_fence": 401.0,
+    "iqr_outliers_high": 13053,
+    "share_with_redaction": 0.6247152106088932,
+    "redaction_tokens_median": 3.0,
+    "redaction_token_share_median": 0.023076923076923078,
+    "unmapped_dispute_type": 144571,
+    "dispute_type_counts": {
+      "(unmapped)": 144571,
+      "unauthorized_transaction": 14641,
+      "error_resolution": 5350,
+      "incorrect_amount": 1789
+    },
+    "product_counts": {
+      "Checking or savings account": 82072,
+      "Money transfer, virtual currency, or money service": 77957,
+      "Prepaid card": 6322
+    },
+    "top_issues": {
+      "Other transaction problem": 47567,
+      "Managing an account": 43634,
+      "Problem caused by your funds being low": 11638,
+      "Fraud or scam": 11044,
+      "Closing an account": 10436,
+      "Problem with a lender or other company charging your account": 10421,
+      "Unauthorized transactions or other transaction problem": 5692,
+      "Opening an account": 5505,
+      "Trouble accessing funds in your mobile or digital wallet": 3406,
+      "Money was not available when promised": 2654
+    },
+    "company_response_counts": {
+      "Closed with explanation": 147197,
+      "Closed with monetary relief": 12797,
+      "Closed with non-monetary relief": 6111,
+      "Untimely response": 244,
+      "In progress": 2
+    },
+    "timely_yes_share": 0.9873580561583639,
+    "submitted_via_counts": {
+      "Web": 166351
+    },
+    "n_companies": 680,
+    "top10_company_share": 0.7497640531166029,
+    "top_companies": {
+      "Block, Inc.": 42200,
+      "Early Warning Services, LLC": 17178,
+      "JPMORGAN CHASE & CO.": 10114,
+      "NAVY FEDERAL CREDIT UNION": 9915,
+      "WELLS FARGO & COMPANY": 9338,
+      "BANK OF AMERICA, NATIONAL ASSOCIATION": 8346,
+      "Chime Financial Inc": 8323,
+      "Paypal Holdings, Inc": 8133,
+      "CAPITAL ONE FINANCIAL CORPORATION": 7312,
+      "CITIBANK, N.A.": 3865
+    },
+    "date_min": "2024-09-18",
+    "date_max": "2026-07-29"
+  },
+  "sample": {
+    "n": 160,
+    "dispute_type_counts": {
+      "error_resolution": 54,
+      "incorrect_amount": 53,
+      "unauthorized_transaction": 53
+    },
+    "product_counts": {
+      "Checking or savings account": 116,
+      "Money transfer, virtual currency, or money service": 36,
+      "Prepaid card": 8
+    },
+    "company_response_counts": {
+      "Closed with explanation": 136,
+      "Closed with monetary relief": 18,
+      "Closed with non-monetary relief": 6
+    },
+    "words": {
+      "count": 160.0,
+      "mean": 207.01875,
+      "std": 126.08325450911417,
+      "min": 40.0,
+      "25%": 100.75,
+      "50%": 182.5,
+      "75%": 276.5,
+      "max": 579.0
+    },
+    "share_with_redaction": 0.9125,
+    "n_companies": 44,
+    "top_company_share": 0.125,
+    "date_min": "2024-10-18",
+    "date_max": "2026-07-22"
+  },
+  "gold": {
+    "n_labeled": 125,
+    "determination_counts": {
+      "request_more_info": 60,
+      "deny_dispute": 37,
+      "approve_dispute": 26,
+      "escalate": 2
+    },
+    "ambiguous_share": 0.624,
+    "clauses_per_case_mean": 1.664,
+    "top_clauses": {
+      "1005.11(a)": 70,
+      "1005.11(c)": 36,
+      "1005.2(m)": 30,
+      "1005.6(b)": 29,
+      "1005.11(d)": 12,
+      "1005.10(b)": 10,
+      "1005.11(b)": 4,
+      "1005.3(a)": 3,
+      "1005.3(c)": 3,
+      "1005.10(c)": 2
+    },
+    "kappa": null,
+    "clause_jaccard": null
+  }
+}

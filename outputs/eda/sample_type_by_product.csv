@@ -1,0 +1,5 @@
+dispute_type,Checking or savings account,"Money transfer, virtual currency, or money service",Prepaid card,All
+error_resolution,47,0,7,54
+incorrect_amount,39,14,0,53
+unauthorized_transaction,30,22,1,53
+All,116,36,8,160

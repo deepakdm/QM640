@@ -1,0 +1,200 @@
+{
+  "fabricated_citation": {
+    "metric": "fabricated_citation",
+    "n_cases": 125,
+    "per_condition": {
+      "C0": {
+        "successes": 1,
+        "n": 125,
+        "rate": 0.008,
+        "wilson_ci": [
+          0.0014135951039980256,
+          0.04392475230499521
+        ],
+        "bootstrap_ci": [
+          0.0,
+          0.024
+        ]
+      },
+      "A": {
+        "successes": 2,
+        "n": 125,
+        "rate": 0.016,
+        "wilson_ci": [
+          0.004398800179193873,
+          0.05646250093046615
+        ],
+        "bootstrap_ci": [
+          0.0,
+          0.04
+        ]
+      },
+      "B": {
+        "successes": 0,
+        "n": 125,
+        "rate": 0.0,
+        "wilson_ci": [
+          1.734723475976807e-18,
+          0.029815393708326456
+        ],
+        "bootstrap_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "C": {
+        "successes": 6,
+        "n": 125,
+        "rate": 0.048,
+        "wilson_ci": [
+          0.022182005595288892,
+          0.10077111031703824
+        ],
+        "bootstrap_ci": [
+          0.016,
+          0.088
+        ]
+      }
+    },
+    "vs_control": {
+      "A": {
+        "n10": 2,
+        "n01": 1,
+        "discordant": 3,
+        "p_value": 1.0,
+        "odds_ratio": 2.0,
+        "difference": 0.008,
+        "difference_ci": [
+          -0.016,
+          0.03219999999999709
+        ],
+        "p_holm": 1.0
+      },
+      "B": {
+        "n10": 0,
+        "n01": 1,
+        "discordant": 1,
+        "p_value": 1.0,
+        "odds_ratio": 0.0,
+        "difference": -0.008,
+        "difference_ci": [
+          -0.024,
+          0.0
+        ],
+        "p_holm": 1.0
+      },
+      "C": {
+        "n10": 6,
+        "n01": 1,
+        "discordant": 7,
+        "p_value": 0.125,
+        "odds_ratio": 6.0,
+        "difference": 0.04,
+        "difference_ci": [
+          0.0,
+          0.08
+        ],
+        "p_holm": 0.375
+      }
+    }
+  },
+  "correct_clause_cited": {
+    "metric": "correct_clause_cited",
+    "n_cases": 125,
+    "per_condition": {
+      "C0": {
+        "successes": 96,
+        "n": 125,
+        "rate": 0.768,
+        "wilson_ci": [
+          0.6866866534318612,
+          0.8333322955404758
+        ],
+        "bootstrap_ci": [
+          0.688,
+          0.84
+        ]
+      },
+      "A": {
+        "successes": 53,
+        "n": 125,
+        "rate": 0.424,
+        "wilson_ci": [
+          0.34090339420677507,
+          0.5116285456368906
+        ],
+        "bootstrap_ci": [
+          0.336,
+          0.512
+        ]
+      },
+      "B": {
+        "successes": 56,
+        "n": 125,
+        "rate": 0.448,
+        "wilson_ci": [
+          0.36366890453732625,
+          0.5354318964083398
+        ],
+        "bootstrap_ci": [
+          0.36,
+          0.536
+        ]
+      },
+      "C": {
+        "successes": 55,
+        "n": 125,
+        "rate": 0.44,
+        "wilson_ci": [
+          0.3560584549578599,
+          0.5275193922871394
+        ],
+        "bootstrap_ci": [
+          0.352,
+          0.528
+        ]
+      }
+    },
+    "vs_control": {
+      "A": {
+        "n10": 6,
+        "n01": 49,
+        "discordant": 55,
+        "p_value": 1.822834494458192e-09,
+        "odds_ratio": 0.12244897959183673,
+        "difference": -0.344,
+        "difference_ci": [
+          -0.44,
+          -0.248
+        ],
+        "p_holm": 5.468503483374576e-09
+      },
+      "B": {
+        "n10": 11,
+        "n01": 51,
+        "discordant": 62,
+        "p_value": 2.775636864143019e-07,
+        "odds_ratio": 0.21568627450980393,
+        "difference": -0.32,
+        "difference_ci": [
+          -0.432,
+          -0.208
+        ],
+        "p_holm": 2.775636864143019e-07
+      },
+      "C": {
+        "n10": 7,
+        "n01": 48,
+        "discordant": 55,
+        "p_value": 1.3087586125948292e-08,
+        "odds_ratio": 0.14583333333333334,
+        "difference": -0.328,
+        "difference_ci": [
+          -0.432,
+          -0.224
+        ],
+        "p_holm": 2.6175172251896583e-08
+      }
+    }
+  }
+}

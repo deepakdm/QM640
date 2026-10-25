@@ -1,0 +1,9 @@
+step,description,rows,removed,removed_pct_of_previous,retained_pct_of_raw
+rows_read,Rows in the export,1610649,0,,100.0
+narrative_present,Consumer narrative present and non-empty,1610649,0,0.0,100.0
+in_date_window,Received within the study window,1610649,0,0.0,100.0
+in_scope_product,Product governed by Regulation E,166351,1444298,89.67,10.328
+dispute_type_mapped,Issue / sub-issue mapped to one of seven dispute types,21780,144571,86.91,1.352
+length_40_600,Narrative length 40-600 words,18887,2893,13.28,1.173
+unique_complaint_id,Duplicate complaint IDs removed,18887,0,0.0,1.173
+unique_narrative,Exact duplicate narratives removed,18646,241,1.28,1.158

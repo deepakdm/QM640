@@ -1,0 +1,6 @@
+gold,approve_dispute,deny_dispute,partial_credit,escalate,request_more_info,no_answer
+approve_dispute,1,0,0,24,1,0
+deny_dispute,0,4,0,23,10,0
+partial_credit,0,0,0,0,0,0
+escalate,0,0,0,2,0,0
+request_more_info,2,0,0,37,21,0

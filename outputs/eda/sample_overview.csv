@@ -1,0 +1,161 @@
+case_id,dispute_type,product,company,company_response,date_received,words,xxxx_tokens
+14421482,incorrect_amount,Checking or savings account,REGIONS FINANCIAL CORPORATION,Closed with explanation,2025-07-02,334,8
+21607398,unauthorized_transaction,Checking or savings account,Chime Financial Inc,Closed with explanation,2026-04-26,239,16
+14530657,unauthorized_transaction,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-07-09,79,2
+15662799,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-09-03,206,11
+17986719,incorrect_amount,Checking or savings account,JPMORGAN CHASE & CO.,Closed with monetary relief,2025-11-28,395,32
+22095928,error_resolution,Checking or savings account,"AXOS FINANCIAL, INC.",Closed with explanation,2026-05-11,362,5
+15124975,incorrect_amount,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-08-06,151,12
+10825396,error_resolution,Checking or savings account,"CITIBANK, N.A.",Closed with non-monetary relief,2024-11-16,69,1
+14738230,incorrect_amount,Checking or savings account,BMO BANK NATIONAL ASSOCIATION,Closed with explanation,2025-07-18,290,12
+20203222,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2026-03-12,324,28
+13981322,error_resolution,Checking or savings account,TD BANK US HOLDING COMPANY,Closed with explanation,2025-06-09,132,2
+11736702,incorrect_amount,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2025-01-25,134,17
+11690277,error_resolution,Checking or savings account,WELLS FARGO & COMPANY,Closed with monetary relief,2025-01-23,150,7
+20773999,incorrect_amount,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with monetary relief,2026-03-30,218,5
+13856382,error_resolution,Prepaid card,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-06-02,441,14
+16103632,error_resolution,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2025-09-22,182,14
+23675438,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with monetary relief,2026-06-29,242,12
+18532762,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2026-01-07,226,28
+16115794,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-09-21,208,11
+16595841,error_resolution,Checking or savings account,"Paypal Holdings, Inc",Closed with monetary relief,2025-10-15,167,5
+19681780,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with explanation,2026-02-21,116,12
+10784811,error_resolution,Checking or savings account,BANNER CORPORATION,Closed with explanation,2024-11-13,191,28
+12132830,error_resolution,Checking or savings account,FIRST NATIONAL BANK OF PENNSYLVANIA,Closed with explanation,2025-02-19,472,47
+20142966,error_resolution,Prepaid card,"Block, Inc.",Closed with explanation,2026-03-10,68,0
+13336882,error_resolution,Checking or savings account,REGIONS FINANCIAL CORPORATION,Closed with explanation,2025-05-05,479,26
+11021865,unauthorized_transaction,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2024-12-04,326,2
+23248539,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with explanation,2026-06-16,266,27
+17433221,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-11-21,420,11
+24275306,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with non-monetary relief,2026-07-16,75,0
+16113725,incorrect_amount,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-09-21,119,5
+11884721,unauthorized_transaction,"Money transfer, virtual currency, or money service","Block, Inc.",Closed with explanation,2025-02-02,146,1
+12232916,incorrect_amount,"Money transfer, virtual currency, or money service",ROBINHOOD MARKETS INC.,Closed with explanation,2025-02-26,94,3
+23574139,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-06-25,433,38
+19218860,unauthorized_transaction,"Money transfer, virtual currency, or money service","BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with non-monetary relief,2026-02-03,126,4
+14451547,error_resolution,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-07-03,113,5
+11480892,unauthorized_transaction,Checking or savings account,M&T BANK CORPORATION,Closed with explanation,2025-01-11,153,10
+19421826,error_resolution,Checking or savings account,FIFTH THIRD FINANCIAL CORPORATION,Closed with monetary relief,2026-02-11,158,26
+16876846,error_resolution,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-10-28,341,17
+18086810,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-12-02,127,7
+18835138,incorrect_amount,Checking or savings account,FIRST NATIONAL BANK OF OMAHA,Closed with explanation,2026-01-19,147,4
+10803099,error_resolution,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2024-11-14,210,12
+13294857,unauthorized_transaction,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-05-02,41,2
+12005387,incorrect_amount,Checking or savings account,"Flexible Finance, Inc.",Closed with explanation,2025-02-09,342,26
+12951516,incorrect_amount,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-04-12,406,25
+16563411,unauthorized_transaction,Checking or savings account,OLD NATIONAL BANCORP,Closed with monetary relief,2025-10-14,120,3
+19341218,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2026-02-08,576,15
+11870227,incorrect_amount,"Money transfer, virtual currency, or money service","Early Warning Services, LLC",Closed with explanation,2025-01-31,70,9
+22786385,error_resolution,Checking or savings account,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2026-06-01,137,9
+22610538,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-05-27,186,4
+19541234,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-02-16,326,5
+15018298,unauthorized_transaction,"Money transfer, virtual currency, or money service","Block, Inc.",Closed with explanation,2025-08-03,402,13
+19364346,error_resolution,Checking or savings account,PNC Bank N.A.,Closed with explanation,2026-02-09,302,19
+15071528,incorrect_amount,Checking or savings account,"ARVEST BANK GROUP, INC.",Closed with explanation,2025-08-04,173,43
+11074742,incorrect_amount,"Money transfer, virtual currency, or money service","OPTUM BANK, INC.",Closed with explanation,2024-12-08,249,10
+11686797,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-01-23,101,0
+16745587,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-10-22,97,5
+15187546,incorrect_amount,Checking or savings account,"Block, Inc.",Closed with explanation,2025-08-09,153,6
+22666828,unauthorized_transaction,"Money transfer, virtual currency, or money service",Chime Financial Inc,Closed with explanation,2026-05-28,315,13
+14989958,unauthorized_transaction,"Money transfer, virtual currency, or money service",ROBINHOOD MARKETS INC.,Closed with explanation,2025-08-01,119,5
+21158911,error_resolution,Prepaid card,Netspend Corporation,Closed with explanation,2026-04-11,159,3
+12624936,error_resolution,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-03-24,183,86
+13860858,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2025-06-03,259,26
+16829511,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-10-26,310,0
+16374680,unauthorized_transaction,Checking or savings account,U.S. BANCORP,Closed with explanation,2025-10-05,226,4
+17993774,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2025-11-27,579,17
+11353674,incorrect_amount,"Money transfer, virtual currency, or money service",JPMORGAN CHASE & CO.,Closed with explanation,2025-01-02,200,24
+14264916,error_resolution,Checking or savings account,MoneyLion Inc.,Closed with explanation,2025-06-24,229,12
+11669938,incorrect_amount,"Money transfer, virtual currency, or money service","Block, Inc.",Closed with explanation,2025-01-17,46,1
+22300757,unauthorized_transaction,Checking or savings account,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2026-05-18,192,23
+15538734,error_resolution,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-08-26,275,11
+20398975,unauthorized_transaction,"Money transfer, virtual currency, or money service","Coinbase, Inc.",Closed with monetary relief,2026-03-19,51,1
+11466766,unauthorized_transaction,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-01-10,117,11
+11544287,incorrect_amount,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2025-01-16,71,2
+15435226,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-08-21,100,0
+13547817,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-05-16,47,0
+12059574,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-02-13,191,4
+11650868,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-01-18,94,0
+19797405,unauthorized_transaction,"Money transfer, virtual currency, or money service",Albert Corporation,Closed with explanation,2026-02-26,130,11
+11632617,error_resolution,Checking or savings account,VYSTAR CREDIT UNION,Closed with monetary relief,2025-01-18,171,0
+16892715,error_resolution,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-10-29,560,7
+20031393,unauthorized_transaction,Checking or savings account,"Block, Inc.",Closed with explanation,2026-03-06,329,2
+10502656,incorrect_amount,Checking or savings account,"B9, Inc.",Closed with explanation,2024-10-18,178,4
+23567783,error_resolution,Checking or savings account,"HUNTINGTON NATIONAL BANK, THE",Closed with explanation,2026-06-25,498,31
+23833120,incorrect_amount,Checking or savings account,"Paypal Holdings, Inc",Closed with explanation,2026-07-03,366,16
+12100722,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2025-02-18,150,8
+11412113,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-01-07,104,9
+19244635,unauthorized_transaction,Checking or savings account,"Block, Inc.",Closed with explanation,2026-02-04,287,14
+11194484,error_resolution,Checking or savings account,"WEBSTER BANK, NATIONAL ASSOCIATION",Closed with explanation,2024-12-17,257,26
+14744212,unauthorized_transaction,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-07-18,70,5
+18674218,incorrect_amount,"Money transfer, virtual currency, or money service","Remitly, Inc.",Closed with explanation,2026-01-13,198,26
+16706877,incorrect_amount,"Money transfer, virtual currency, or money service",Credit Sage LLC,Closed with explanation,2025-10-20,194,11
+14132656,error_resolution,Checking or savings account,U.S. BANCORP,Closed with explanation,2025-06-17,249,9
+16927381,unauthorized_transaction,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-10-30,471,18
+22305330,unauthorized_transaction,"Money transfer, virtual currency, or money service","Block, Inc.",Closed with explanation,2026-05-18,192,10
+10874025,unauthorized_transaction,Checking or savings account,U.S. BANCORP,Closed with explanation,2024-11-20,286,6
+23296739,incorrect_amount,"Money transfer, virtual currency, or money service",ROBINHOOD MARKETS INC.,Closed with explanation,2026-06-17,83,4
+19900438,unauthorized_transaction,"Money transfer, virtual currency, or money service","Block, Inc.",Closed with explanation,2026-03-02,282,4
+20183984,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-03-11,239,5
+10935520,unauthorized_transaction,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with monetary relief,2024-11-26,176,24
+17364332,incorrect_amount,Checking or savings account,MoneyLion Inc.,Closed with explanation,2025-11-19,59,2
+20055046,error_resolution,Prepaid card,Comerica,Closed with monetary relief,2026-03-06,77,0
+16136964,unauthorized_transaction,"Money transfer, virtual currency, or money service",WELLS FARGO & COMPANY,Closed with explanation,2025-09-23,413,39
+14552584,unauthorized_transaction,Prepaid card,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-07-09,40,0
+13081450,error_resolution,Checking or savings account,"Block, Inc.",Closed with explanation,2025-04-21,87,5
+18703552,error_resolution,Checking or savings account,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with non-monetary relief,2026-01-14,75,4
+21397946,incorrect_amount,Checking or savings account,AMERICAN EXPRESS COMPANY,Closed with monetary relief,2026-04-20,49,3
+16093473,incorrect_amount,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with monetary relief,2025-09-21,214,16
+14982476,error_resolution,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-07-30,40,0
+12240277,error_resolution,Checking or savings account,U.S. BANCORP,Closed with explanation,2025-02-28,197,18
+21709599,error_resolution,Checking or savings account,BMO BANK NATIONAL ASSOCIATION,Closed with non-monetary relief,2026-04-29,163,12
+18467833,error_resolution,Checking or savings account,JPMORGAN CHASE & CO.,Closed with monetary relief,2026-01-05,79,6
+21205321,incorrect_amount,Checking or savings account,FIRST TECHNOLOGY FEDERAL CREDIT UNION,Closed with explanation,2026-04-13,130,7
+13230005,unauthorized_transaction,"Money transfer, virtual currency, or money service","BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-04-29,113,18
+21947301,unauthorized_transaction,"Money transfer, virtual currency, or money service",Chime Financial Inc,Closed with explanation,2026-05-06,211,5
+22961704,incorrect_amount,Checking or savings account,Chime Financial Inc,Closed with monetary relief,2026-06-06,101,17
+21070226,incorrect_amount,"Money transfer, virtual currency, or money service",Chime Financial Inc,Closed with explanation,2026-04-08,239,5
+14653523,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2025-07-14,90,14
+22224596,unauthorized_transaction,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2026-05-14,440,38
+15065799,incorrect_amount,"Money transfer, virtual currency, or money service","BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-08-05,184,35
+16532604,error_resolution,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2025-10-14,69,5
+11694031,unauthorized_transaction,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-01-22,281,30
+11855826,error_resolution,Checking or savings account,"OPTUM BANK, INC.",Closed with explanation,2025-01-30,484,14
+13805331,incorrect_amount,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with non-monetary relief,2025-05-30,305,7
+11154415,unauthorized_transaction,Checking or savings account,UNITED SERVICES AUTOMOBILE ASSOCIATION,Closed with explanation,2024-12-14,270,15
+11224816,error_resolution,Prepaid card,"Block, Inc.",Closed with explanation,2024-12-20,74,5
+13681734,error_resolution,Checking or savings account,"Paypal Holdings, Inc",Closed with explanation,2025-05-23,85,4
+16203108,error_resolution,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2025-09-26,392,33
+21887922,incorrect_amount,Checking or savings account,UNITED SERVICES AUTOMOBILE ASSOCIATION,Closed with explanation,2026-05-05,84,9
+14686051,unauthorized_transaction,Checking or savings account,Chime Financial Inc,Closed with explanation,2025-07-16,56,3
+12668509,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with monetary relief,2025-03-26,100,9
+11739128,incorrect_amount,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2025-01-25,242,21
+24187375,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-07-14,98,0
+10664811,unauthorized_transaction,Checking or savings account,TD BANK US HOLDING COMPANY,Closed with monetary relief,2024-11-02,79,18
+20060738,error_resolution,Checking or savings account,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2026-03-07,49,10
+21188098,unauthorized_transaction,Checking or savings account,UNITED SERVICES AUTOMOBILE ASSOCIATION,Closed with monetary relief,2026-04-13,206,48
+24479468,incorrect_amount,Checking or savings account,UNITED SERVICES AUTOMOBILE ASSOCIATION,Closed with explanation,2026-07-22,177,5
+11867682,error_resolution,Prepaid card,Netspend Corporation,Closed with explanation,2025-02-01,165,0
+16388796,incorrect_amount,Checking or savings account,NAVY FEDERAL CREDIT UNION,Closed with explanation,2025-10-06,158,4
+16115623,error_resolution,Checking or savings account,JPMORGAN CHASE & CO.,Closed with explanation,2025-09-21,98,2
+21703284,incorrect_amount,"Money transfer, virtual currency, or money service","CITIBANK, N.A.",Closed with explanation,2026-04-29,411,22
+13846100,unauthorized_transaction,"Money transfer, virtual currency, or money service","Bridge IT, Inc.",Closed with explanation,2025-06-02,92,4
+19940563,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-03-03,169,23
+10960647,error_resolution,Checking or savings account,TD BANK US HOLDING COMPANY,Closed with explanation,2024-11-28,319,8
+12665957,unauthorized_transaction,Checking or savings account,"BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-03-26,66,2
+21749300,error_resolution,Checking or savings account,Chime Financial Inc,Closed with explanation,2026-04-30,227,12
+23277461,error_resolution,Checking or savings account,"CULLEN/FROST BANKERS, INC.",Closed with explanation,2026-06-16,151,2
+16720877,unauthorized_transaction,"Money transfer, virtual currency, or money service","Block, Inc.",Closed with explanation,2025-10-21,154,20
+17858937,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-12-09,474,26
+22639302,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-05-27,85,10
+22519447,unauthorized_transaction,Checking or savings account,"SOFI TECHNOLOGIES, INC.",Closed with explanation,2026-05-24,225,12
+15581786,incorrect_amount,"Money transfer, virtual currency, or money service","BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-08-28,242,13
+23120512,incorrect_amount,Checking or savings account,CAPITAL ONE FINANCIAL CORPORATION,Closed with explanation,2026-06-11,275,23
+13855814,unauthorized_transaction,"Money transfer, virtual currency, or money service","Paypal Holdings, Inc",Closed with explanation,2025-06-02,188,11
+17124345,error_resolution,Prepaid card,AMERICAN EXPRESS COMPANY,Closed with explanation,2025-11-09,180,0
+23222728,error_resolution,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-06-15,251,29
+16473339,incorrect_amount,Checking or savings account,ALLY FINANCIAL INC.,Closed with explanation,2025-10-09,241,34
+22350242,unauthorized_transaction,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2026-05-19,301,13
+17898292,error_resolution,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-12-02,416,31
+11359570,incorrect_amount,"Money transfer, virtual currency, or money service","BANK OF AMERICA, NATIONAL ASSOCIATION",Closed with explanation,2025-01-02,59,5
+12814877,incorrect_amount,Checking or savings account,WELLS FARGO & COMPANY,Closed with explanation,2025-04-04,81,5

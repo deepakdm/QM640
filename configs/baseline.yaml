@@ -1,0 +1,20 @@
+# Config A — Baseline: dense retrieval, medium chunks, no re-ranking
+name: baseline_dense_512
+corpus_dir: data/corpus
+gold_path: data/gold/gold_cases.jsonl
+chunking:
+  strategy: fixed          # fixed | section
+  chunk_size: 512          # approx. tokens
+  overlap: 64
+retrieval:
+  mode: dense              # dense | bm25 | hybrid
+  top_k: 5
+  rerank: false
+  hybrid_alpha: 0.5        # weight on dense score when mode=hybrid
+generation:
+  temperature: 0.0
+  max_tokens: 800
+  require_citations: true
+evaluation:
+  runs_per_case: 3         # for consistency metric
+  judge_sample_size: 40    # manual validation sample for LLM-as-judge

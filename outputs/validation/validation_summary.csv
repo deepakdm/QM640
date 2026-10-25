@@ -1,0 +1,5 @@
+rq,tested,matched,match_rate
+RQ1,8,2,0.25
+RQ2,8,3,0.375
+RQ3,8,3,0.375
+RQ4,8,2,0.25

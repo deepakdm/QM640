@@ -1,0 +1,87 @@
+{
+  "source_file": "data/raw/cfpb/complaints.csv",
+  "funnel": [
+    {
+      "step": "rows_read",
+      "description": "Rows in the export",
+      "rows": 1610649
+    },
+    {
+      "step": "narrative_present",
+      "description": "Consumer narrative present and non-empty",
+      "rows": 1610649
+    },
+    {
+      "step": "in_date_window",
+      "description": "Received within the study window",
+      "rows": 1610649
+    },
+    {
+      "step": "in_scope_product",
+      "description": "Product governed by Regulation E",
+      "rows": 166351
+    },
+    {
+      "step": "dispute_type_mapped",
+      "description": "Issue / sub-issue mapped to one of seven dispute types",
+      "rows": 21780
+    },
+    {
+      "step": "length_40_600",
+      "description": "Narrative length 40-600 words",
+      "rows": 18887
+    },
+    {
+      "step": "unique_complaint_id",
+      "description": "Duplicate complaint IDs removed",
+      "rows": 18887
+    },
+    {
+      "step": "unique_narrative",
+      "description": "Exact duplicate narratives removed",
+      "rows": 18646
+    }
+  ],
+  "study_window": [
+    "2024-09-18",
+    "2026-08-14"
+  ],
+  "candidates_after_filters": 18646,
+  "candidate_dispute_type_counts": {
+    "unauthorized_transaction": 12622,
+    "error_resolution": 4515,
+    "incorrect_amount": 1509
+  },
+  "sampled": 160,
+  "dispute_type_counts": {
+    "error_resolution": 54,
+    "incorrect_amount": 53,
+    "unauthorized_transaction": 53
+  },
+  "product_counts": {
+    "Checking or savings account": 116,
+    "Money transfer, virtual currency, or money service": 36,
+    "Prepaid card": 8
+  },
+  "company_response_counts": {
+    "Closed with explanation": 136,
+    "Closed with monetary relief": 18,
+    "Closed with non-monetary relief": 6
+  },
+  "date_range": [
+    "2024-10-18",
+    "2026-07-22"
+  ],
+  "filters": {
+    "narrative_required": true,
+    "min_narrative_words": 40,
+    "max_narrative_words": 600,
+    "products": [
+      "Checking or savings account",
+      "Money transfer, virtual currency, or money service",
+      "Prepaid card"
+    ]
+  },
+  "seed": 42,
+  "include_reg_z": false
+}

@@ -1,0 +1,4 @@
+dispute_type,approve_dispute,deny_dispute,escalate,request_more_info
+error_resolution,5,10,1,17
+incorrect_amount,8,15,0,23
+unauthorized_transaction,13,12,1,20
