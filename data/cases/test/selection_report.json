@@ -1,0 +1,181 @@
+{
+  "csv": "data/raw/cfpb/complaints.csv",
+  "window": [
+    "2024-09-18",
+    "2026-08-11"
+  ],
+  "seed": 2026,
+  "n_draw": 290,
+  "pool_after_cleaning": 18646,
+  "excluded_pilot_ids": 160,
+  "excluded_identical_narratives": 0,
+  "funnel": [
+    {
+      "step": "rows_read",
+      "description": "Rows in the export",
+      "rows": 1610649
+    },
+    {
+      "step": "narrative_present",
+      "description": "Consumer narrative present and non-empty",
+      "rows": 1610649
+    },
+    {
+      "step": "in_date_window",
+      "description": "Received within the study window",
+      "rows": 1610649
+    },
+    {
+      "step": "in_scope_product",
+      "description": "Product governed by Regulation E",
+      "rows": 166351
+    },
+    {
+      "step": "dispute_type_mapped",
+      "description": "Issue / sub-issue mapped to one of seven dispute types",
+      "rows": 21780
+    },
+    {
+      "step": "length_40_600",
+      "description": "Narrative length 40-600 words",
+      "rows": 18887
+    },
+    {
+      "step": "unique_complaint_id",
+      "description": "Duplicate complaint IDs removed",
+      "rows": 18887
+    },
+    {
+      "step": "unique_narrative",
+      "description": "Exact duplicate narratives removed",
+      "rows": 18646
+    },
+    {
+      "step": "not_pilot_id",
+      "description": "Not a pilot (development) complaint",
+      "rows": 18486
+    },
+    {
+      "step": "not_pilot_text",
+      "description": "Narrative not identical to a pilot narrative",
+      "rows": 18486
+    }
+  ],
+  "quarter_days": {
+    "2024Q3": 13,
+    "2024Q4": 92,
+    "2025Q1": 90,
+    "2025Q2": 91,
+    "2025Q3": 92,
+    "2025Q4": 92,
+    "2026Q1": 90,
+    "2026Q2": 91,
+    "2026Q3": 42
+  },
+  "quarter_weights": {
+    "2024Q3": 0.14285714285714285,
+    "2024Q4": 1.010989010989011,
+    "2025Q1": 0.989010989010989,
+    "2025Q2": 1.0,
+    "2025Q3": 1.010989010989011,
+    "2025Q4": 1.010989010989011,
+    "2026Q1": 0.989010989010989,
+    "2026Q2": 1.0,
+    "2026Q3": 0.46153846153846156
+  },
+  "quarter_allocation": {
+    "2024Q3": 9,
+    "2024Q4": 38,
+    "2025Q1": 37,
+    "2025Q2": 37,
+    "2025Q3": 38,
+    "2025Q4": 38,
+    "2026Q1": 37,
+    "2026Q2": 37,
+    "2026Q3": 19
+  },
+  "quarter_capacity": {
+    "2024Q3": 205,
+    "2024Q4": 1547,
+    "2025Q1": 2938,
+    "2025Q2": 2447,
+    "2025Q3": 2853,
+    "2025Q4": 2712,
+    "2026Q1": 2462,
+    "2026Q2": 2826,
+    "2026Q3": 496
+  },
+  "drawn_by_quarter_and_type": {
+    "2024Q3": {
+      "error_resolution": 3,
+      "incorrect_amount": 3,
+      "unauthorized_transaction": 3
+    },
+    "2024Q4": {
+      "error_resolution": 12,
+      "incorrect_amount": 13,
+      "unauthorized_transaction": 13
+    },
+    "2025Q1": {
+      "error_resolution": 12,
+      "incorrect_amount": 12,
+      "unauthorized_transaction": 13
+    },
+    "2025Q2": {
+      "error_resolution": 12,
+      "incorrect_amount": 12,
+      "unauthorized_transaction": 13
+    },
+    "2025Q3": {
+      "error_resolution": 12,
+      "incorrect_amount": 13,
+      "unauthorized_transaction": 13
+    },
+    "2025Q4": {
+      "error_resolution": 12,
+      "incorrect_amount": 13,
+      "unauthorized_transaction": 13
+    },
+    "2026Q1": {
+      "error_resolution": 12,
+      "incorrect_amount": 12,
+      "unauthorized_transaction": 13
+    },
+    "2026Q2": {
+      "error_resolution": 12,
+      "incorrect_amount": 12,
+      "unauthorized_transaction": 13
+    },
+    "2026Q3": {
+      "error_resolution": 6,
+      "incorrect_amount": 6,
+      "unauthorized_transaction": 7
+    }
+  },
+  "dispute_type_counts": {
+    "unauthorized_transaction": 101,
+    "incorrect_amount": 96,
+    "error_resolution": 93
+  },
+  "sampled": 290,
+  "candidates_after_filters": 18646,
+  "product_counts": {
+    "Checking or savings account": 200,
+    "Money transfer, virtual currency, or money service": 62,
+    "Prepaid card": 28
+  },
+  "company_response_counts": {
+    "Closed with explanation": 237,
+    "Closed with monetary relief": 42,
+    "Closed with non-monetary relief": 10,
+    "Untimely response": 1
+  },
+  "date_range": [
+    "2024-09-19",
+    "2026-07-21"
+  ],
+  "study_window": [
+    "2024-09-18",
+    "2026-08-11"
+  ]
+}

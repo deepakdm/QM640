@@ -1,0 +1,228 @@
+{
+  "metric": "determination_correct_needs_human",
+  "n_cases": 225,
+  "per_condition": {
+    "C0": {
+      "successes": 115,
+      "n": 225,
+      "rate": 0.5111111111111111,
+      "wilson_ci": [
+        0.44615886122240583,
+        0.5756903265330248
+      ],
+      "bootstrap_ci": [
+        0.4444444444444444,
+        0.5777777777777777
+      ]
+    },
+    "A": {
+      "successes": 113,
+      "n": 225,
+      "rate": 0.5022222222222222,
+      "wilson_ci": [
+        0.43740408637579675,
+        0.5669657511752894
+      ],
+      "bootstrap_ci": [
+        0.43555555555555553,
+        0.5688888888888889
+      ]
+    },
+    "B": {
+      "successes": 114,
+      "n": 225,
+      "rate": 0.5066666666666667,
+      "wilson_ci": [
+        0.44177895678393214,
+        0.5713305558693265
+      ],
+      "bootstrap_ci": [
+        0.44,
+        0.5733333333333334
+      ]
+    },
+    "C": {
+      "successes": 117,
+      "n": 225,
+      "rate": 0.52,
+      "wilson_ci": [
+        0.4549337827595549,
+        0.5843947552002202
+      ],
+      "bootstrap_ci": [
+        0.4533333333333333,
+        0.5866666666666667
+      ]
+    }
+  },
+  "vs_control": {
+    "A": {
+      "n10": 5,
+      "n01": 7,
+      "discordant": 12,
+      "p_value": 0.7744140625,
+      "odds_ratio": 0.7142857142857143,
+      "difference": -0.008888888888888889,
+      "difference_ci": [
+        -0.04,
+        0.022222222222222223
+      ],
+      "p_holm": 1.0
+    },
+    "B": {
+      "n10": 4,
+      "n01": 5,
+      "discordant": 9,
+      "p_value": 1.0,
+      "odds_ratio": 0.8,
+      "difference": -0.0044444444444444444,
+      "difference_ci": [
+        -0.03111111111111111,
+        0.022222222222222223
+      ],
+      "p_holm": 1.0
+    },
+    "C": {
+      "n10": 6,
+      "n01": 4,
+      "discordant": 10,
+      "p_value": 0.75390625,
+      "odds_ratio": 1.5,
+      "difference": 0.008888888888888889,
+      "difference_ci": [
+        -0.017777777777777778,
+        0.035555555555555556
+      ],
+      "p_holm": 1.0
+    }
+  },
+  "cochran_q": {
+    "Q": 1.9811320754716981,
+    "df": 3,
+    "p_value": 0.5763320342958971,
+    "n": 225,
+    "k": 4
+  },
+  "classification": {
+    "C0": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 2,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 54
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 17,
+        "partial_credit": 0,
+        "needs_human": 52
+      },
+      {
+        "index": "partial_credit",
+        "approve_dispute": 0,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 2
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 2,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 96
+      }
+    ],
+    "A": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 5,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 51
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 14,
+        "partial_credit": 0,
+        "needs_human": 55
+      },
+      {
+        "index": "partial_credit",
+        "approve_dispute": 0,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 2
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 2,
+        "deny_dispute": 1,
+        "partial_credit": 1,
+        "needs_human": 94
+      }
+    ],
+    "B": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 4,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 52
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 15,
+        "partial_credit": 0,
+        "needs_human": 54
+      },
+      {
+        "index": "partial_credit",
+        "approve_dispute": 0,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 2
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 2,
+        "deny_dispute": 0,
+        "partial_credit": 1,
+        "needs_human": 95
+      }
+    ],
+    "C": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 5,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 51
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 18,
+        "partial_credit": 0,
+        "needs_human": 51
+      },
+      {
+        "index": "partial_credit",
+        "approve_dispute": 0,
+        "deny_dispute": 0,
+        "partial_credit": 0,
+        "needs_human": 2
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 3,
+        "deny_dispute": 0,
+        "partial_credit": 1,
+        "needs_human": 94
+      }
+    ]
+  }
+}

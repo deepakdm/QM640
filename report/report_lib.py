@@ -6,7 +6,6 @@ header), clears its body and writes new content. Inline markup in text:
 """
 from __future__ import annotations
 
-import copy
 import re
 from pathlib import Path
 

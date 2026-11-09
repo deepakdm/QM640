@@ -1,0 +1,24 @@
+{
+  "rule": "Conditions are ranked on the split being reported by (1) determination accuracy, highest first; ties broken by (2) macro-F1, highest first; (3) fabricated-citation rate, lowest first; (4) 95th-percentile response time, lowest first. The top-ranked condition is reported as the best model on that split. Its lead over the runner-up is tested with an exact McNemar test on accuracy (alpha = .05, two-sided); if that test is not significant the report states that the two are statistically indistinguishable. The rule was fixed on the development set; the test set confirms or overturns it. The no-retrieval baseline C0 is eligible.",
+  "ranking": [
+    "C0",
+    "B",
+    "C",
+    "A"
+  ],
+  "best": "C0",
+  "best_accuracy": 0.296,
+  "best_macro_f1": 0.24441067207024655,
+  "runner_up": "B",
+  "runner_up_accuracy": 0.248,
+  "lead_points": 0.04799999999999999,
+  "mcnemar_vs_runner_up": {
+    "n10": 10,
+    "n01": 4,
+    "discordant": 14,
+    "p_value": 0.1795654296875,
+    "odds_ratio": 2.5
+  },
+  "distinguishable": false,
+  "statement": "C0 ranks first under the pre-specified rule (accuracy 29.6%, macro-F1 0.244); its lead over B is 4.8 points (exact McNemar p = 0.180), so the two are statistically indistinguishable."
+}

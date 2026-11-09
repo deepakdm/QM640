@@ -1,0 +1,188 @@
+{
+  "metric": "determination_correct_needs_human",
+  "n_cases": 125,
+  "per_condition": {
+    "C0": {
+      "successes": 69,
+      "n": 125,
+      "rate": 0.552,
+      "wilson_ci": [
+        0.46456810359166034,
+        0.6363310954626739
+      ],
+      "bootstrap_ci": [
+        0.464,
+        0.64
+      ]
+    },
+    "A": {
+      "successes": 65,
+      "n": 125,
+      "rate": 0.52,
+      "wilson_ci": [
+        0.4331350544138638,
+        0.6056723298378032
+      ],
+      "bootstrap_ci": [
+        0.432,
+        0.608
+      ]
+    },
+    "B": {
+      "successes": 68,
+      "n": 125,
+      "rate": 0.544,
+      "wilson_ci": [
+        0.4566773858646581,
+        0.6286988594890092
+      ],
+      "bootstrap_ci": [
+        0.456,
+        0.632
+      ]
+    },
+    "C": {
+      "successes": 67,
+      "n": 125,
+      "rate": 0.536,
+      "wilson_ci": [
+        0.44880835644487477,
+        0.6210449352081258
+      ],
+      "bootstrap_ci": [
+        0.448,
+        0.624
+      ]
+    }
+  },
+  "vs_control": {
+    "A": {
+      "n10": 3,
+      "n01": 7,
+      "discordant": 10,
+      "p_value": 0.34375,
+      "odds_ratio": 0.42857142857142855,
+      "difference": -0.032,
+      "difference_ci": [
+        -0.08,
+        0.016
+      ],
+      "p_holm": 1.0
+    },
+    "B": {
+      "n10": 4,
+      "n01": 5,
+      "discordant": 9,
+      "p_value": 1.0,
+      "odds_ratio": 0.8,
+      "difference": -0.008,
+      "difference_ci": [
+        -0.056,
+        0.04
+      ],
+      "p_holm": 1.0
+    },
+    "C": {
+      "n10": 3,
+      "n01": 5,
+      "discordant": 8,
+      "p_value": 0.7265625,
+      "odds_ratio": 0.6,
+      "difference": -0.016,
+      "difference_ci": [
+        -0.064,
+        0.032
+      ],
+      "p_holm": 1.0
+    }
+  },
+  "cochran_q": {
+    "Q": 1.6666666666666667,
+    "df": 3,
+    "p_value": 0.6443698056370251,
+    "n": 125,
+    "k": 4
+  },
+  "classification": {
+    "C0": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 0,
+        "needs_human": 26
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 8,
+        "needs_human": 29
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 1,
+        "deny_dispute": 0,
+        "needs_human": 61
+      }
+    ],
+    "A": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 1,
+        "deny_dispute": 0,
+        "needs_human": 25
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 4,
+        "needs_human": 33
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 2,
+        "deny_dispute": 0,
+        "needs_human": 60
+      }
+    ],
+    "B": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 0,
+        "needs_human": 26
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 9,
+        "needs_human": 28
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 3,
+        "deny_dispute": 0,
+        "needs_human": 59
+      }
+    ],
+    "C": [
+      {
+        "index": "approve_dispute",
+        "approve_dispute": 1,
+        "deny_dispute": 0,
+        "needs_human": 25
+      },
+      {
+        "index": "deny_dispute",
+        "approve_dispute": 0,
+        "deny_dispute": 7,
+        "needs_human": 30
+      },
+      {
+        "index": "needs_human",
+        "approve_dispute": 3,
+        "deny_dispute": 0,
+        "needs_human": 59
+      }
+    ]
+  }
+}

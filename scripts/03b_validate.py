@@ -125,5 +125,5 @@ summ = (rec.dropna(subset=["match"]).groupby("rq")["match"]
         .agg(tested="size", matched="sum").assign(match_rate=lambda d: d.matched / d.tested))
 summ.to_csv(out / "validation_summary.csv")
 print(summ.to_string())
-print(f"\nMismatches to trace (gold label, parsing, retrieval, scoring or model):")
+print("\nMismatches to trace (gold label, parsing, retrieval, scoring or model):")
 print(rec[rec.match == False][["case_id", "rq", "observed", "comment"]].to_string(index=False))  # noqa: E712

@@ -1,0 +1,29 @@
+{
+  "engine": "statsmodels GEE (exchangeable)",
+  "working_correlation": 0.7619431023041714,
+  "n_observations": 675,
+  "n_complaints": 225,
+  "dispute_reference": "unauthorized_transaction",
+  "events_per_parameter": 64.0,
+  "ame": {
+    "B": {
+      "ame_total": -0.02692927911261478,
+      "ame_direct": -0.02693082197483292,
+      "share_via_clause": -5.729311251477596e-05,
+      "share_ci": [
+        -0.20997653125336874,
+        0.16607766368741367
+      ]
+    },
+    "C": {
+      "ame_total": 0.031337275941033554,
+      "ame_direct": 0.03133039863218913,
+      "share_via_clause": 0.00021946096582758007,
+      "share_ci": [
+        -0.7795084230186907,
+        1.205680365556608
+      ]
+    }
+  },
+  "converged": true
+}

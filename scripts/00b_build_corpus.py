@@ -38,7 +38,12 @@ p.add_argument("--xml", help="local copy of the Part 1005 XML (skips the downloa
 p.add_argument("--date", help="eCFR issue date YYYY-MM-DD (default: latest available)")
 p.add_argument("--faq-html")
 p.add_argument("--visa-pdf")
+p.add_argument("--force", action="store_true",
+               help="overwrite the existing corpus (changes every retrieval result; protocol lock will fail)")
 args = p.parse_args()
+if (OUT / "reg_e.md").exists() and not args.force:
+    sys.exit(f"{OUT / 'reg_e.md'} already exists. The committed corpus is the one every reported result "
+             "used, so it is not rebuilt. Use --force only to start over.")
 OUT.mkdir(parents=True, exist_ok=True)
 
 

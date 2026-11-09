@@ -17,8 +17,8 @@ Two provenance facts belong in the methods section and are printed by `filter_re
 """
 from __future__ import annotations
 
-import json
 import re
+import sys
 from pathlib import Path
 from typing import Iterator, Optional
 
@@ -126,6 +126,31 @@ def scope_for_product(product: str) -> Optional[str]:
 # download date. Override with --start/--end in 01_prepare_data.py.
 DEFAULT_START = "2024-09-18"
 DEFAULT_END = "2026-08-14"   # CFPB stopped publishing narratives on 2026-08-14
+
+# The raw file is NOT downloaded by any script by default. Place it here yourself (see
+# data/raw/cfpb/README.md). A real gzip copy next to it (complaints.csv.gz) is used as a fallback;
+# a Git LFS placeholder (a ~130-byte text stub left by a clone without `git lfs pull`) is rejected.
+RAW_CSV = Path("data/raw/cfpb/complaints.csv")
+
+
+def _is_lfs_pointer(path: Path) -> bool:
+    with open(path, "rb") as fh:
+        return fh.read(40).startswith(b"version https://git-lfs")
+
+
+def require_raw_csv(path: str | Path | None = None) -> Path:
+    """Return the raw CFPB file to read, or exit with instructions. With no path, prefers
+    data/raw/cfpb/complaints.csv and falls back to a real complaints.csv.gz."""
+    candidates = [Path(path)] if path else [RAW_CSV, RAW_CSV.with_suffix(".csv.gz")]
+    for c in candidates:
+        if c.exists() and c.stat().st_size > 0 and not _is_lfs_pointer(c):
+            return c
+    found = [str(c) for c in candidates if c.exists()]
+    hint = (f" {found[0]} is only a Git LFS placeholder; run `git lfs pull` or place the real file."
+            if found and _is_lfs_pointer(Path(found[0])) else "")
+    sys.exit(f"Raw CFPB data not found at {candidates[0]}.{hint}\n"
+             "Place the merged narratives file there (see data/raw/cfpb/README.md). Steps that do not need "
+             "it (labels, scoring, analysis, figures, report) run without it.")
 
 FUNNEL_STEPS = [
     ("rows_read", "Rows in the export"),

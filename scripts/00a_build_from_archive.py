@@ -1,10 +1,22 @@
-# scripts/00a_build_from_archive.py
+"""Step 0a (optional): build data/raw/cfpb/complaints.csv from the CFPB narratives archive files.
+
+The study's raw file is data/raw/cfpb/complaints.csv. If you already have it, you do not need this
+script. Nothing is downloaded unless you pass --download:
+
+    python scripts/00a_build_from_archive.py               # uses archive ZIPs already in data/raw/cfpb/archive/
+    python scripts/00a_build_from_archive.py --download    # fetches missing ZIPs from files.consumerfinance.gov
+
+It keeps complaints received 2024-09-18 to 2026-08-14 in the three Regulation E products, with a
+non-empty narrative, de-duplicated by Complaint ID, and refuses to overwrite an existing
+complaints.csv unless --force is given.
+"""
+import argparse
+import sys
 import zipfile
 from datetime import date
 from pathlib import Path
 
 import pandas as pd
-import requests
 
 RAW = Path("data/raw/cfpb")
 ARCH = RAW / "archive"
@@ -34,7 +46,19 @@ PRODUCTS = {
     "Money transfer, virtual currency, or money service",
 }
 
+ap = argparse.ArgumentParser()
+ap.add_argument("--download", action="store_true", help="download archive ZIPs that are missing")
+ap.add_argument("--force", action="store_true", help="overwrite an existing complaints.csv")
+args = ap.parse_args()
+
+if OUT.exists() and not args.force:
+    sys.exit(f"{OUT} already exists; nothing to do. Use --force to rebuild it from the archive ZIPs.")
 ARCH.mkdir(parents=True, exist_ok=True)
+missing = [n for n in FILES if not ((ARCH / n).exists() and (ARCH / n).stat().st_size > 0)]
+if missing and not args.download:
+    sys.exit(f"{len(missing)} of {len(FILES)} archive ZIPs are not in {ARCH} (first: {missing[0]}).\n"
+             f"Either place data/raw/cfpb/complaints.csv yourself, copy the ZIPs into {ARCH}, or rerun "
+             "with --download to fetch them from the CFPB.")
 
 # 1. download (skips files already present)
 for name in FILES:
@@ -42,6 +66,7 @@ for name in FILES:
     if dest.exists() and dest.stat().st_size > 0:
         print("have", name)
         continue
+    import requests
     print("downloading", name)
     with requests.get(BASE + name, stream=True, timeout=120) as r:
         r.raise_for_status()

@@ -461,7 +461,7 @@ d.table(T["dictA"], "Data Dictionary, Part A: CFPB Consumer Complaint Database F
         ["Variable name", "Definition", "Datatype", "Allowed values / range", "Missing values handling", "Notes"],
         A, [1650, 1950, 1000, 1500, 1660, 1600], size=8,
         note="Field names follow the CFPB codebook. PII = personally identifiable information. Missingness counts for "
-             f"every field are reported in outputs/eda/missingness.csv and summarized under Data Cleaning.")
+             "every field are reported in outputs/eda/missingness.csv and summarized under Data Cleaning.")
 B = [
     ["Derived case fields", "", "", "", "", ""],
     ["dispute_type", "Normalized category from Issue + Sub-issue", "Categorical", "7 labels", "Unmapped complaints excluded", "Strata; RQ3 factor"],

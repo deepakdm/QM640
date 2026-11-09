@@ -23,24 +23,44 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from dispute_rag.cfpb_cases import (
+    require_raw_csv,
     DEFAULT_END, DEFAULT_START, filter_report, load_candidates, sample_cases, save_cases, to_cases,
 )
 from dispute_rag.gold import export_labeling_sheet
 
 p = argparse.ArgumentParser()
-p.add_argument("--csv", default="data/raw/cfpb/complaints.csv",
-               help="CCDB export (bulk or filtered)")
+p.add_argument("--csv", default=None, help="default: data/raw/cfpb/complaints.csv")
 p.add_argument("--n", type=int, default=160, help="target gold-set size (synopsis: 160)")
 p.add_argument("--seed", type=int, default=42, help="sampling seed, recorded in the report")
 p.add_argument("--include-reg-z", action="store_true",
                help="also include credit-card billing disputes (requires Reg Z in the corpus)")
 p.add_argument("--start", default=DEFAULT_START, help="first date received (YYYY-MM-DD)")
 p.add_argument("--end", default=DEFAULT_END, help="last date received / download date (YYYY-MM-DD)")
+p.add_argument("--force", action="store_true",
+               help="redraw even though labels exist (the old sample and sheet are backed up first)")
 args = p.parse_args()
 
-csv_path = Path(args.csv)
-if not csv_path.exists():
-    sys.exit(f"CCDB export not found at {csv_path}. See docs/data_sources.md for the download steps.")
+# This step draws the DEVELOPMENT (pilot) sample and writes a fresh, empty labeling sheet. Rerunning
+# it after labeling would replace the labelled sheet and the case file every result depends on.
+sheet = Path("data/gold/labeling_sheet.csv")
+if sheet.exists():
+    import pandas as _pd
+    n_labeled = int(_pd.read_csv(sheet, dtype=str)["determination"].fillna("").str.strip().ne("").sum())
+    if n_labeled and not args.force:
+        sys.exit(f"{sheet} already holds {n_labeled} labels, so the development sample was NOT redrawn.\n"
+                 "Nothing needs to be rerun here; continue with scripts/02_import_gold.py. Use --force only "
+                 "to start the pilot over (the current files are backed up first).")
+    if n_labeled:
+        import shutil
+        import time
+        stamp = time.strftime("%Y%m%d_%H%M%S")
+        for f in (sheet, Path("data/cases/cases.jsonl"), Path("data/cases/sample_160.csv"),
+                  Path("data/cases/selection_report.json")):
+            if f.exists():
+                shutil.copy2(f, f.with_name(f"{f.stem}_backup_{stamp}{f.suffix}"))
+        print(f"Backed up the existing development sample and sheet (suffix _backup_{stamp}).")
+
+csv_path = require_raw_csv(args.csv)
 
 print(f"Scanning {csv_path} ...")
 funnel: dict = {}

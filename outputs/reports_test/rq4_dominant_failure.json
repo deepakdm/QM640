@@ -1,0 +1,18 @@
+{
+  "category": "retrieval_miss",
+  "count": 78,
+  "n_errors": 164,
+  "share": 0.47560975609756095,
+  "wilson_ci": [
+    0.4006130222930928,
+    0.5517229496639523
+  ],
+  "p_one_sided_vs_0.20": 2.2969238189643826e-15,
+  "pooled_A_B_C": false,
+  "counts": {
+    "retrieval_miss": 78,
+    "over_escalation": 51,
+    "right_clause_wrong_reasoning": 23,
+    "fabricated_citation": 12
+  }
+}

@@ -26,6 +26,11 @@ class GenerationCfg(BaseModel):
     temperature: float = 0.0
     max_tokens: int = 800
     require_citations: bool = True
+    # Instruction text, identical across conditions. "v6" is the interim prompt and the default.
+    # "v7" narrows `escalate` (the pilot answered escalate on ~66% of complaints against 1.6% in the
+    # gold labels). Switching is a development-set decision: record it in
+    # docs/preregistration_final.md and lock the protocol BEFORE the test set is run.
+    prompt_version: Literal["v6", "v7"] = "v6"
 
 
 class EvaluationCfg(BaseModel):

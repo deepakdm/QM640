@@ -4,6 +4,11 @@ Usage:
     python scripts/03_run_experiment.py configs/baseline.yaml
     python scripts/03_run_experiment.py configs/baseline.yaml --limit 10     # quick validation run
     python scripts/03_run_experiment.py configs/baseline.yaml --score-only   # re-score saved answers
+    python scripts/03_run_experiment.py configs/baseline.yaml --split test   # locked test set
+
+--split dev (default) uses the interim pilot paths unchanged. --split test reads
+data/cases/test/ and data/gold/test/, writes outputs/runs_test/<config>/, and refuses to call the
+model unless the protocol lock (scripts/02b_lock_protocol.py) is present and intact.
 
 Answers are appended to outputs/runs/<config>/answers.jsonl as each call returns, so an
 interrupted run resumes where it stopped. A call that fails after the SDK's retries is logged to
@@ -27,6 +32,7 @@ from dispute_rag.evaluate import aggregate, summarize_run  # noqa: E402
 from dispute_rag.failure_analysis import failure_records, failure_table  # noqa: E402
 from dispute_rag.gold import load_gold  # noqa: E402
 from dispute_rag.schemas import RAGAnswer  # noqa: E402
+from dispute_rag.splits import paths  # noqa: E402
 
 p = argparse.ArgumentParser()
 p.add_argument("config")
@@ -34,19 +40,29 @@ p.add_argument("--limit", type=int, default=None, help="only the first N gold ca
 p.add_argument("--case-ids", default=None, help="file with one case_id per line")
 p.add_argument("--score-only", action="store_true", help="do not call the model")
 p.add_argument("--no-judge", action="store_true")
-p.add_argument("--out-root", default="outputs/runs")
+p.add_argument("--out-root", default=None, help="default: the split's runs folder")
+p.add_argument("--split", choices=["dev", "test"], default="dev")
+p.add_argument("--allow-unlocked", action="store_true",
+               help="test split only: run without an intact protocol lock (results then cannot be "
+                    "reported as confirmatory)")
 args = p.parse_args()
 
 cfg = ExperimentConfig.load(args.config)
-gold = load_gold(cfg.gold_path)
-cases = [c for c in load_cases(Path("data/cases/cases.jsonl")) if c.case_id in gold]
+sp = paths(args.split)
+if args.split == "test" and not args.score_only:
+    from dispute_rag.splits import verify_lock
+    changed = verify_lock()
+    if changed and not args.allow_unlocked:
+        sys.exit("Test protocol not locked or changed since lock:\n  " + "\n  ".join(changed))
+gold = load_gold(cfg.gold_path if args.split == "dev" else sp.gold)
+cases = [c for c in load_cases(sp.cases) if c.case_id in gold]
 if args.case_ids:
     wanted = {l.strip() for l in open(args.case_ids) if l.strip()}
     cases = [c for c in cases if c.case_id in wanted]
 if args.limit:
     cases = cases[: args.limit]
 
-out_dir = Path(args.out_root) / cfg.name
+out_dir = Path(args.out_root or sp.runs) / cfg.name
 out_dir.mkdir(parents=True, exist_ok=True)
 ans_path, err_path = out_dir / "answers.jsonl", out_dir / "errors.jsonl"
 

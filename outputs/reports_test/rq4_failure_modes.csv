@@ -1,0 +1,5 @@
+condition,clause_miss,correct,fabricated_citation,over_escalation,retrieval_miss,right_clause_wrong_reasoning
+C0,94,57,0,46,0,28
+A,0,54,8,66,50,47
+B,0,48,1,67,59,50
+C,0,61,12,51,78,23

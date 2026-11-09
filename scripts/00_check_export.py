@@ -16,19 +16,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import pandas as pd
 
 from dispute_rag.cfpb_cases import (
+    require_raw_csv,
     COLUMN_ALIASES, REG_E_PRODUCTS, REG_Z_PRODUCTS, _MIN_NARRATIVE_WORDS,
     _MAX_NARRATIVE_WORDS, classify_dispute_type, scope_for_product,
 )
 
 p = argparse.ArgumentParser()
-p.add_argument("--csv", default="data/raw/cfpb/complaints.csv")
+p.add_argument("--csv", default=None, help="default: data/raw/cfpb/complaints.csv")
 p.add_argument("--include-reg-z", action="store_true")
 p.add_argument("--rows", type=int, default=50_000, help="rows to inspect for the diagnosis")
 args = p.parse_args()
 
-path = Path(args.csv)
-if not path.exists():
-    sys.exit(f"FAIL  No file at {path}\n      See docs/data_sources.md for the export steps.")
+path = require_raw_csv(args.csv)
 
 header = pd.read_csv(path, nrows=0).columns.tolist()
 print(f"Checking {path}\n{len(header)} columns found\n")

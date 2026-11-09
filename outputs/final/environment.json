@@ -1,0 +1,31 @@
+{
+  "recorded_utc": "2026-11-09T02:57:36+00:00",
+  "os": "Darwin 25.6.0",
+  "machine": "arm64",
+  "cpu": "Apple M3 Pro",
+  "logical_cores": 11,
+  "ram_gb": 18.0,
+  "gpu": {
+    "cuda": false,
+    "mps": true,
+    "name": null
+  },
+  "python": "3.13.2",
+  "packages": {
+    "anthropic": "2.6.0",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.15.0",
+    "faiss-cpu": "1.15.1",
+    "rank-bm25": "0.2.2",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "python-docx": "1.2.0",
+    "pydantic": "2.14.3"
+  },
+  "generation": "Hosted LLM via provider API (no local GPU used for generation)",
+  "sentence_for_report": "Retrieval (embedding, BM25 and cross-encoder re-ranking) and all analysis ran on one Apple M3 Pro CPU (11 logical cores, 18.0 GB RAM; Apple GPU (MPS) available) under Darwin 25.6.0 with Python 3.13.2; the language model ran on the provider's hosted infrastructure through its API."
+}

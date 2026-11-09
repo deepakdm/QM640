@@ -1,0 +1,17 @@
+{
+  "label": "request_more_info",
+  "count": 97,
+  "n": 225,
+  "accuracy": 0.4311111111111111,
+  "wilson_ci": [
+    0.3680934465164687,
+    0.49644158939986116
+  ],
+  "gold_distribution": {
+    "request_more_info": 97,
+    "deny_dispute": 69,
+    "approve_dispute": 56,
+    "partial_credit": 2,
+    "escalate": 1
+  }
+}

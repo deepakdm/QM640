@@ -1,0 +1,7 @@
+metric,column,direction,best,best_value,runner_up_value
+Determination accuracy,accuracy,higher,C,0.27111111111111114,0.25333333333333335
+Macro-F1,macro_f1,higher,C,0.2135378496306488,0.19243818849449204
+Fabricated-citation rate,fabricated_rate,lower,C0,0.0,0.0044444444444444444
+Correct clause cited,correct_clause_rate,higher,C0,0.48,0.3511111111111111
+Consistency across runs,consistent_rate,higher,A,0.9688888888888889,0.9644444444444444
+95th-percentile response time (s),latency_p95_s,lower,C0,10.347040600204487,11.959590716400998

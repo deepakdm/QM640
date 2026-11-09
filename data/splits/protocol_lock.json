@@ -1,0 +1,23 @@
+{
+  "locked_utc": "2026-11-08T13:36:25+00:00",
+  "sha256": {
+    "configs/control_no_retrieval.yaml": "6e5d9df119f3fa3fe81f1f12113e43902e58425bfef1628c70506fe649c6465f",
+    "configs/baseline.yaml": "23bc2f148b01376c5714d6bb1977bb16fe2dbd66580504342f0a5a0616693374",
+    "configs/small_chunks.yaml": "52f18aaf8ef1d3f08cd4b061c54d62ef51d5aa36b847a4e2cb70d9eede9f6c88",
+    "configs/hybrid_rerank.yaml": "846aae5b01a7d07b53a22a6c4ff88d4d82024b8259ef98142d4422b51389d33a",
+    "src/dispute_rag/pipeline.py": "319da013a01e8ec9a4a51b8624c42977ab9cc03833f118539302b89280dc71b2",
+    "src/dispute_rag/retriever.py": "5e277d20307ed1c3630bb78e8bb27160b1b8f5adfc6941cb4151f49bd53d6953",
+    "src/dispute_rag/corpus.py": "00bbac192cbd04a083dd1458a3595510814ad9040b3ff539e3a74bb618d98705",
+    "src/dispute_rag/refs.py": "4d2cbc623791c4b417faa018f65bdcd824a3c107a54e4b2f58e1083bce69258d",
+    "src/dispute_rag/evaluate.py": "745fca1794b929fe25818fdec26ae19fd3e9b202943773c5e4fc24071bc2c9c3",
+    "src/dispute_rag/failure_analysis.py": "25ceb9269823fdfdc6a5f9d4e218091ebcd2554a46ca7ebe1885fc74c9b82bbc",
+    "src/dispute_rag/classification.py": "0601fdd72fdda500f8e172eff917ff41a91458eebe144711264a936efd698872",
+    "src/dispute_rag/analysis.py": "c97b68bb5163ab576fc165db72fbd7ee7f7ab3abfdfa3902990a83a60e385753",
+    "src/dispute_rag/final_analysis.py": "35bba9aa9876b2639d08b748852b9ea5644efb49ed2338982e41bbc743c98bae",
+    "data/corpus/reg_e.md": "cf1269de1911006c25507195f2a189fbacc00153074d757f7203526b5c98d36f",
+    "data/corpus/reg_e_interp.md": "286fe4218af13da0bfdebc9a47c54d9409595aa76e24aec9ce27e81d0098c220",
+    "data/splits/split_manifest.json": "79efd99857e982be3b68eea72ffdeb7648aa46716cad14b9321e52f16da76e5e",
+    "data/gold/test/gold_cases.jsonl": "fa39fef1fe00910b88560a39673ca81cd3cace1e021dbd6a5fc2b42e67104004",
+    "docs/preregistration_final.md": "4a40771e4604d43051f62406b759ec643d791ce631d44d0a2e06348bea7b21d2"
+  }
+}

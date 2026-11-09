@@ -94,3 +94,26 @@ def classify_citations(cited: Iterable[str], corpus_index: set[str]) -> dict:
         else:
             fabricated.append(n)
     return {"valid": valid, "fabricated": fabricated, "unverifiable": unverifiable}
+
+
+# ---------------------------------------------------------------------------------------------
+# Matching-rule sensitivity (final report). The PRIMARY rule is `cites_gold` above ("strict"),
+# unchanged from the interim. The two looser rules are reported as a pre-specified sensitivity
+# analysis because retrieval conditions tend to cite the passage label, which is often the parent
+# of the gold clause (cited 1005.11 vs gold 1005.11(a)) and scores 0 under the strict rule.
+#   strict   cited == gold or more specific than gold                        (primary)
+#   parent   cited and gold on the same branch, either direction             (sensitivity 1)
+#   section  same section number, paragraphs ignored (1005.11 == 1005.11(c))  (sensitivity 2)
+CLAUSE_MATCH_MODES = ("strict", "parent", "section")
+
+
+def cites_gold_mode(cited: Iterable[str], gold: Iterable[str], mode: str = "strict") -> bool:
+    c = [n for n in (normalize_ref(x) for x in cited) if n]
+    g = [n for n in (normalize_ref(x) for x in gold) if n]
+    if mode == "strict":
+        return any(is_descendant_or_equal(ci, gi) for ci in c for gi in g)
+    if mode == "parent":
+        return any(related(ci, gi) for ci in c for gi in g)
+    if mode == "section":
+        return any(split_ref(ci)[0] == split_ref(gi)[0] for ci in c for gi in g)
+    raise ValueError(f"unknown clause-match mode {mode!r}")

@@ -1,0 +1,8 @@
+{
+  "split": "test",
+  "n_labels": 225,
+  "n_ambiguous": 165,
+  "n_double_rated": 0,
+  "cohen_kappa": null,
+  "clause_jaccard": null
+}

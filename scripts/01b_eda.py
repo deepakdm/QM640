@@ -28,7 +28,7 @@ import numpy as np
 import pandas as pd
 
 from dispute_rag.cfpb_cases import (
-    COLUMN_ALIASES, DEFAULT_END, DEFAULT_START, FUNNEL_STEPS, _MAX_NARRATIVE_WORDS,
+    COLUMN_ALIASES, DEFAULT_END, DEFAULT_START, _MAX_NARRATIVE_WORDS, require_raw_csv,
     _MIN_NARRATIVE_WORDS, classify_dispute_type, load_cases, parse_dates, scope_for_product,
 )
 from dispute_rag.viz import CONDITION_COLORS, SERIES, TEXT, TEXT_2, apply_style, finish  # noqa: F401
@@ -38,7 +38,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 XXXX_RE = re.compile(r"\bX{2,}\b")
 
 p = argparse.ArgumentParser()
-p.add_argument("--csv", default="data/raw/cfpb/complaints.csv")
+p.add_argument("--csv", default=None, help="default: data/raw/cfpb/complaints.csv")
 p.add_argument("--cases", default="data/cases/cases.jsonl")
 p.add_argument("--selection", default="data/cases/selection_report.json")
 p.add_argument("--gold", default="data/gold/gold_cases.jsonl")
@@ -60,9 +60,7 @@ def pct(a, b):
 # ---------------------------------------------------------------------------------------------
 # 1. Raw export: one chunked pass for missingness, duplicates and population-level distributions
 # ---------------------------------------------------------------------------------------------
-csv_path = Path(args.csv)
-if not csv_path.exists():
-    sys.exit(f"No export at {csv_path}. Run 00_check_export.py first.")
+csv_path = require_raw_csv(args.csv)
 header = pd.read_csv(csv_path, nrows=0).columns.tolist()
 col = {k: next((a for a in v if a in header), None) for k, v in COLUMN_ALIASES.items()}
 
@@ -88,7 +86,8 @@ for chunk in pd.read_csv(csv_path, dtype=str, chunksize=200_000, low_memory=Fals
     if sub.empty:
         continue
     text = narr[keep]
-    get = lambda k: sub[col[k]] if col.get(k) else pd.Series([None] * len(sub), index=sub.index)  # noqa: E731
+    def get(k, sub=sub):
+        return sub[col[k]] if col.get(k) else pd.Series([None] * len(sub), index=sub.index)
     pool_rows.append(pd.DataFrame({
         "complaint_id": get("complaint_id"),
         "date_received": d[keep],

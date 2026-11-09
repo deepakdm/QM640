@@ -29,6 +29,14 @@ Respond ONLY with JSON:
  "cited_sections": ["<section_ref>", ...]}"""
 
 
+# v7 (optional; see config.GenerationCfg.prompt_version). Same rules 1-4 and 6; rule 5 replaced by
+# an explicit decision order so that escalate is reserved for the cases it is defined for.
+SYSTEM_PROMPT_V7 = SYSTEM_PROMPT.replace(
+    """5. Choose "request_more_info" only when the complaint lacks facts needed to decide, and "escalate" only when the facts are sufficient but the decision exceeds first-line authority (for example a missed deadline or an unusually large amount). Do not choose either merely because excerpts are missing.""",
+    """5. Decide in this order. (a) If the stated facts show the consumer is entitled to relief under the regulation, choose "approve_dispute" (or "partial_credit" if only part is owed). (b) If the stated facts show the transfer is not an error or not covered, choose "deny_dispute". (c) If a fact needed for (a) or (b) is missing or redacted, choose "request_more_info" and name the missing fact. (d) Choose "escalate" ONLY if the facts are sufficient and the case involves a legal dispute, suspected institutional misconduct, or a deadline the institution has already missed. Uncertainty, complexity or fraud alone is not a reason to escalate. Do not choose (c) or (d) merely because excerpts are missing.""")
+assert SYSTEM_PROMPT_V7 != SYSTEM_PROMPT
+PROMPTS = {"v6": SYSTEM_PROMPT, "v7": SYSTEM_PROMPT_V7}
+
 def case_to_query(case: DisputeCase) -> str:
     """Build the retrieval query from the published complaint.
 
@@ -76,7 +84,7 @@ class RAGPipeline:
         t0 = time.perf_counter()
         query = case_to_query(case)
         retrieved = self.retriever.retrieve(query)
-        raw = self.llm.complete(SYSTEM_PROMPT, build_user_message(query, retrieved))
+        raw = self.llm.complete(PROMPTS[self.cfg.generation.prompt_version], build_user_message(query, retrieved))
         latency = time.perf_counter() - t0
         parsed, ok = parse_response(raw)
         refs: list[str] = []

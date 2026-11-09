@@ -81,7 +81,7 @@ def test_classify_dispute_type():
 def _candidate_frame(n=12):
     return pd.DataFrame({
         "complaint_id": [str(1000 + i) for i in range(n)],
-        "date_received": ["2024-01-0{}".format(i % 9 + 1) for i in range(n)],
+        "date_received": [f"2024-01-0{i % 9 + 1}" for i in range(n)],
         "product": ["Checking or savings account"] * n,
         "sub_product": ["Checking account"] * n,
         "issue": ["Managing an account"] * n,

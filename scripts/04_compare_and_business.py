@@ -26,23 +26,27 @@ import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
 from dispute_rag.analysis import (  # noqa: E402
-    CONDITION_LABELS, benchmark_table, compare_to_control, dominant_failure, load_per_case,
+    benchmark_table, compare_to_control, dominant_failure, load_per_case,
 )
 from dispute_rag.business_model import Assumptions, breakeven_accuracy, cost_per_case, sensitivity, tornado  # noqa: E402
 from dispute_rag.cfpb_cases import load_cases  # noqa: E402
 from dispute_rag.gold import load_gold  # noqa: E402
+from dispute_rag.splits import paths  # noqa: E402
 from dispute_rag.viz import CONDITION_COLORS, SERIES, TEXT, TEXT_2, apply_style, finish  # noqa: E402
 
 import matplotlib  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
 p = argparse.ArgumentParser()
-p.add_argument("--runs", default="outputs/runs")
-p.add_argument("--out", default="outputs/reports")
+p.add_argument("--split", choices=["dev", "test"], default="dev",
+               help="dev = interim pilot paths (unchanged); test = locked test-set paths")
+p.add_argument("--runs", default=None, help="default: the split's runs folder")
+p.add_argument("--out", default=None, help="default: the split's reports folder")
 p.add_argument("--n-boot", type=int, default=500, help="cluster-bootstrap reps for RQ3 mediation")
 args = p.parse_args()
 
-runs, reports = Path(args.runs), Path(args.out)
+sp = paths(args.split)
+runs, reports = Path(args.runs or sp.runs), Path(args.out or sp.reports)
 reports.mkdir(parents=True, exist_ok=True)
 apply_style()
 
@@ -53,8 +57,8 @@ order = [c for c in ("C0", "A", "B", "C") if c in set(long["condition"])]
 print("Conditions found:", order)
 
 # Case factors for RQ3
-cases = {c.case_id: c for c in load_cases(Path("data/cases/cases.jsonl"))}
-gold = load_gold(Path("data/gold/gold_cases.jsonl"))
+cases = {c.case_id: c for c in load_cases(sp.cases)}
+gold = load_gold(sp.gold)
 long["dispute_type"] = long["case_id"].map(lambda i: cases[i].dispute_type if i in cases else None)
 long["narrative_words"] = long["case_id"].map(lambda i: len(cases[i].narrative.split()) if i in cases else np.nan)
 long["ambiguous"] = long["case_id"].map(lambda i: int(gold[i].ambiguous) if i in gold else np.nan)

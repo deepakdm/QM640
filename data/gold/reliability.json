@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "n_labels": 125,
+  "n_ambiguous": 78,
+  "n_double_rated": 0,
+  "cohen_kappa": null,
+  "clause_jaccard": null
+}
